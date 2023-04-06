@@ -20,9 +20,11 @@ export default function Home() {
 			</Head>
 			<Layout>
 				<br />
-				<Button className="w-72 bg-gradient-to-r from-indigo-600 to-blue-500 hover:from-blue-500 hover:to-indigo-600 active:from-indigo-800 active:to-red-500 text-white font-bold py-3 px-4 rounded-full transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50">
-					<Link href="/images">Enter Site</Link>
-				</Button>
+				<Link href="/images">
+					<Button className="w-72 bg-gradient-to-r from-indigo-600 to-blue-500 hover:from-blue-500 hover:to-indigo-600 active:from-indigo-800 active:to-red-500 text-white font-bold py-3 px-4 rounded-full transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50">
+						Enter Site
+					</Button>
+				</Link>
 			</Layout>
 		</>
 	);
