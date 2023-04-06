@@ -6,8 +6,6 @@ interface ContextProps {
 	children: ReactElement;
 }
 
-interface contextType {}
-
 export function ContextWrapper({ children }: ContextProps) {
 	const [imageDataUrl, setImageDataUrl] = useState();
 

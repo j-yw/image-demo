@@ -1,10 +1,15 @@
-import { useEffect, useRef, useState } from "react";
-import Button from "./Button";
 import { useAppContext } from "@/context";
 import { useRouter } from "next/router";
+import { useEffect, useRef, useState } from "react";
+import Button from "./Button";
+interface ICanvasImageProps {
+	imageUrl: string;
+	close: () => void;
+	requestEdit: boolean;
+}
 
-function CanvasImage({ imageUrl, close, requestEdit }: any) {
-	const [image, setImage] = useState<any>();
+function CanvasImage({ imageUrl, close, requestEdit }: ICanvasImageProps) {
+	const [image, setImage] = useState<HTMLImageElement>();
 	const [request, setRequest] = useState("");
 	const { imageDataUrl, setImageDataUrl } = useAppContext();
 	const router = useRouter();
@@ -88,19 +93,15 @@ function CanvasImage({ imageUrl, close, requestEdit }: any) {
 				);
 			}
 		}
-		// Set up event listeners
 		canvas.addEventListener("mousemove", handleMouseMove);
 
-		// Define the mousemove event handler
-
-		// Clean up event listeners
 		return () => {
 			canvas.removeEventListener("mousemove", handleMouseMove);
 		};
 	}, []);
 
 	return (
-		<>
+		<div>
 			<canvas ref={canvasRef} width={800} height={600} />
 			{requestEdit && (
 				<div>
@@ -113,7 +114,7 @@ function CanvasImage({ imageUrl, close, requestEdit }: any) {
 				</div>
 			)}
 			<Button onClick={handleSave}>Save</Button>
-		</>
+		</div>
 	);
 }
 

@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
+import Image from "@/components/Image";
 import Layout from "@/components/Layout";
+import { ACCESS_TOKEN, APIURL } from "@/constant";
+import { ImageData } from "@/interfaces";
 import { queryFn } from "@/utils";
 import { useQuery } from "@tanstack/react-query";
-import { ACCESS_TOKEN, APIURL } from "@/constant";
-import Image from "@/components/Image";
-import { ImageData } from "@/interfaces";
+import { useRef } from "react";
 import { RotatingLines } from "react-loader-spinner";
 
 function ImagesPage() {
@@ -52,7 +52,7 @@ function ImagesPage() {
 				/>
 			) : (
 				<>
-					<div>
+					<div className="flex flex-wrap items-start justify-center gap-5">
 						{data?.map((image, index) => {
 							imageRefs.current[index] =
 								imageRefs.current[index] || null;

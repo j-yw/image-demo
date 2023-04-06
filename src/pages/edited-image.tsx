@@ -1,8 +1,7 @@
-import React from "react";
-import Layout from "@/components/Layout";
-import Image from "@/components/Image";
-import { useAppContext } from "@/context";
 import Button from "@/components/Button";
+import Image from "@/components/Image";
+import Layout from "@/components/Layout";
+import { useAppContext } from "@/context";
 import Link from "next/link";
 
 function EditedImagePage() {

@@ -1,5 +1,4 @@
-import React, { ReactNode } from "react";
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 
 interface IButtonProps {
 	children: ReactNode;

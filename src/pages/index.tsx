@@ -1,6 +1,6 @@
-import Head from "next/head";
 import Button from "@/components/Button";
 import Layout from "@/components/Layout";
+import Head from "next/head";
 import Link from "next/link";
 
 export default function Home() {
