@@ -18,27 +18,8 @@ function ImagesPage() {
 			);
 		},
 	});
-	console.log(
-		`🍀 \n | 🍄 file: images.tsx:22 \n | 🍄 ImagesPage \n | 🍄 data:`,
-		data
-	);
 
 	const imageRefs = useRef<Array<HTMLDivElement | null>>([]);
-
-	const handleEditClick = (imageId: string) => {
-		console.log(
-			`🍀 \n | 🍄 file: images.tsx:26 \n | 🍄 handleEditClick \n | 🍄 imageId:`,
-			imageId
-		);
-		const imageRef = document.getElementById(imageId);
-		console.log(
-			`🍀 \n | 🍄 file: images.tsx:31 \n | 🍄 handleEditClick \n | 🍄 imageRef:`,
-			imageRef
-		);
-		if (imageRef) {
-			imageRef.focus();
-		}
-	};
 
 	return (
 		<Layout>

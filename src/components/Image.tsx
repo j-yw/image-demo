@@ -1,4 +1,4 @@
-import { Modal, useMantineTheme } from "@mantine/core";
+import { Modal } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import NextImage from "next/image";
 import Button from "./Button";
@@ -12,7 +12,6 @@ interface IImageProps {
 }
 
 const Image = ({ src, alt, className, id }: IImageProps) => {
-	const theme = useMantineTheme();
 	const [imageEditOpened, { open: openImageEdit, close: closeImageEdit }] =
 		useDisclosure(false);
 	const [
