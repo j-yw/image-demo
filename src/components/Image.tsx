@@ -41,7 +41,6 @@ const Image = ({ src, alt, className, id }: IImageProps) => {
 				title="Request Edit Here"
 				fullScreen
 				transitionProps={{ transition: "fade", duration: 200 }}
-				styles={{ body: { backgroundColor: "black" } }}
 			>
 				<CanvasImage
 					imageUrl={src}
