@@ -1,8 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import Button from "@/components/Button";
+import Layout from "@/components/Layout";
+import Link from "next/link";
 
 export default function Home() {
 	return (
@@ -19,7 +18,12 @@ export default function Home() {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main></main>
+			<Layout>
+				<br />
+				<Button className="w-72 bg-gradient-to-r from-indigo-600 to-blue-500 hover:from-blue-500 hover:to-indigo-600 active:from-indigo-800 active:to-red-500 text-white font-bold py-3 px-4 rounded-full transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50">
+					<Link href="/images">Enter Site</Link>
+				</Button>
+			</Layout>
 		</>
 	);
 }
